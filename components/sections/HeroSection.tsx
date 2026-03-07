@@ -40,7 +40,7 @@ export function HeroSection() {
     >
       <HypnoWebGLBackground
         className="opacity-34 md:opacity-46 xl:opacity-60"
-        fallbackVariant="grid-flow"
+        fallbackVariant="gradient"
       />
       <div
         className="pointer-events-none absolute inset-0 -z-[5] bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(255,240,2,0.06),transparent)] md:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(255,240,2,0.08),transparent)] xl:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(255,240,2,0.1),transparent)]"
@@ -72,9 +72,9 @@ export function HeroSection() {
           </p>
         </FadeIn>
         <FadeIn delay={0.45}>
-          <div className="flex items-center gap-2 text-sm tracking-[0.25em] text-bm-grayLight/70">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-2 text-[10px] tracking-[0.16em] text-bm-grayLight/70 sm:text-sm sm:tracking-[0.25em]">
             {BRAND.taglineSecondary.map((t, i) => (
-              <span key={t} className="flex items-center gap-2">
+              <span key={t} className="flex items-center gap-2 whitespace-nowrap">
                 {i > 0 && (
                   <span className="inline-block h-1 w-1 rounded-full bg-bm-yellow/60" />
                 )}

@@ -97,7 +97,7 @@ function getCanvasProfile(width: number): CanvasProfile {
 export function MathCanvasBackground({
   className,
   fallbackVariant = "lines",
-  mobileBreakpoint = 390,
+  mobileBreakpoint = 0,
 }: MathCanvasBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [mode, setMode] = useState<"auto" | "canvas" | "fallback">("auto");

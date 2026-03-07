@@ -117,7 +117,7 @@ void main() {
 export function HypnoWebGLBackground({
   className,
   fallbackVariant = "grid-flow",
-  mobileBreakpoint = 390,
+  mobileBreakpoint = 0,
 }: HypnoWebGLBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [mode, setMode] = useState<"auto" | "webgl" | "fallback">("auto");
@@ -136,13 +136,19 @@ export function HypnoWebGLBackground({
       return;
     }
 
-    const gl = canvas.getContext("webgl", {
+    const contextOptions = {
       antialias: false,
       alpha: true,
       depth: false,
       stencil: false,
       powerPreference: "low-power",
-    });
+    } as const;
+
+    const gl =
+      (canvas.getContext("webgl2", contextOptions) as WebGLRenderingContext | null) ??
+      (canvas.getContext("webgl", contextOptions) as WebGLRenderingContext | null) ??
+      (canvas.getContext("webgl") as WebGLRenderingContext | null) ??
+      (canvas.getContext("experimental-webgl") as WebGLRenderingContext | null);
 
     if (!gl) {
       setMode("fallback");

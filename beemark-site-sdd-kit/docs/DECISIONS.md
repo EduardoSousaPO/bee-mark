@@ -179,6 +179,20 @@ Garantir consistência visual da experiência entre desktop, tablet e mobile sem
 
 ---
 
+## 2026-03-07 — Correção de corte no mobile e fallback visual do Hero
+### Decisão
+Ajustar responsividade do header e do bloco de tags do Hero para eliminar corte horizontal no mobile, além de trocar fallback do Hero para `gradient` quando WebGL não estiver disponível.
+
+### Motivo
+Garantir integridade visual da primeira dobra em iPhone/Android e manter percepção de fundo animado mesmo em fallback.
+
+### Implicações
+- Header com CTA reduzido em telas pequenas (`Diagnóstico`)
+- Linha de tags com quebra controlada e sem clipping
+- Fallback do Hero mais perceptível que grid em telas pequenas
+
+---
+
 ## Template de nova decisão
 
 ## AAAA-MM-DD — título curto
