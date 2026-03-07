@@ -123,6 +123,34 @@ Atender a necessidade de maior sofisticação visual e interatividade sem transf
 
 ---
 
+## 2026-03-07 — TechSection em fluxo interligado e progressivo
+### Decisão
+Evoluir a `TechSection` para um fluxo visual interligado (cards conectados por linhas animadas), com progressão automática e por scroll (GSAP) e interação por clique, mantendo responsividade e copy enxuta.
+
+### Motivo
+Materializar melhor a lógica do agente de IA como processo comercial contínuo, aumentando retenção visual e compreensão da jornada sem adicionar excesso de texto.
+
+### Implicações
+- Estrutura de layout mais complexa (grid/flex) na camada tecnológica
+- Conectores animados por CSS keyframes (`dataDash`) para percepção de fluxo
+- Estado ativo sincronizado entre auto-play, scroll e clique do usuário
+
+---
+
+## 2026-03-07 — Calibração de intensidade por breakpoint
+### Decisão
+Aplicar perfis de intensidade por largura de tela para WebGL (Hero), Canvas (Tech) e progressão temporal das etapas da TechSection, mantendo efeito premium no desktop e reduzindo ruído visual em telas menores.
+
+### Motivo
+Preservar impacto visual hipnótico sem sacrificar leitura, foco em CTA e estabilidade de performance em tablet/mobile.
+
+### Implicações
+- WebGL com uniforms dinâmicos (`intensity`, `speed`, `noise`) e DPR adaptativo
+- Canvas com densidade, velocidade, rastro e vida das partículas ajustados por breakpoint
+- Auto-play da jornada de IA com intervalo adaptativo por largura da viewport
+
+---
+
 ## Template de nova decisão
 
 ## AAAA-MM-DD — título curto

@@ -38,9 +38,12 @@ export function HeroSection() {
       className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden px-6 pb-10 text-center lg:min-h-[88vh] lg:px-8"
       aria-labelledby="hero-title"
     >
-      <HypnoWebGLBackground className="opacity-55" fallbackVariant="grid-flow" />
+      <HypnoWebGLBackground
+        className="opacity-34 md:opacity-46 xl:opacity-60"
+        fallbackVariant="grid-flow"
+      />
       <div
-        className="pointer-events-none absolute inset-0 -z-[5] bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(255,240,2,0.08),transparent)]"
+        className="pointer-events-none absolute inset-0 -z-[5] bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(255,240,2,0.06),transparent)] md:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(255,240,2,0.08),transparent)] xl:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(255,240,2,0.1),transparent)]"
         aria-hidden
       />
       <div className="relative flex flex-col items-center gap-5">

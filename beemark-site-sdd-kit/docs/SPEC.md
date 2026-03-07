@@ -156,6 +156,8 @@ Estabelecer um sistema de motion consistente.
 - Canvas/WebGL apenas nas seções estratégicas (Hero e camada tecnológica).
 - manter opacidade baixa para preservar legibilidade da copy e foco no CTA.
 - GSAP restrito a uma cena de narrativa (timeline de fluxo), sem uso global.
+- na seção tecnológica, usar fluxo progressivo interligado (auto-play + clique + scroll) sem comprometer leitura.
+- calibrar intensidade visual por breakpoint (desktop > tablet > mobile) para preservar performance e conversão.
 
 ---
 

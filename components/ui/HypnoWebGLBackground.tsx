@@ -10,6 +10,23 @@ type HypnoWebGLBackgroundProps = {
   mobileBreakpoint?: number;
 };
 
+type HypnoProfile = {
+  intensity: number;
+  speed: number;
+  noise: number;
+  maxDpr: number;
+};
+
+function getHypnoProfile(width: number): HypnoProfile {
+  if (width < 1280) {
+    return { intensity: 0.24, speed: 0.88, noise: 0.2, maxDpr: 1.25 };
+  }
+  if (width < 1600) {
+    return { intensity: 0.31, speed: 1, noise: 0.28, maxDpr: 1.4 };
+  }
+  return { intensity: 0.38, speed: 1.12, noise: 0.34, maxDpr: 1.5 };
+}
+
 function createShader(
   gl: WebGLRenderingContext,
   type: number,
@@ -58,6 +75,9 @@ const FRAGMENT_SHADER = `
 precision mediump float;
 uniform vec2 u_resolution;
 uniform float u_time;
+uniform float u_intensity;
+uniform float u_speed;
+uniform float u_noise;
 
 float hash(vec2 p) {
   return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
@@ -67,21 +87,21 @@ void main() {
   vec2 uv = (gl_FragCoord.xy / u_resolution.xy) * 2.0 - 1.0;
   uv.x *= u_resolution.x / u_resolution.y;
 
-  float t = u_time * 0.12;
+  float t = u_time * 0.12 * u_speed;
   float r = length(uv);
   float a = atan(uv.y, uv.x);
 
   float spiral = sin(8.0 * r - 2.2 * t + 4.0 * a);
   float rings = cos(22.0 * r - 1.4 * t);
   float flow = sin(uv.x * 7.0 + t) * cos(uv.y * 6.0 - t * 1.2);
-  float noise = hash(floor((uv + t * 0.2) * 18.0)) * 0.35;
+  float noise = hash(floor((uv + t * 0.2) * 18.0)) * u_noise;
 
   float field = 0.45 * spiral + 0.35 * rings + 0.2 * flow + noise;
   field = smoothstep(-0.3, 0.9, field);
 
   vec3 yellow = vec3(1.0, 0.94, 0.01);
   vec3 black = vec3(0.0);
-  vec3 color = mix(black, yellow, field * 0.35);
+  vec3 color = mix(black, yellow, field * u_intensity);
 
   float vignette = smoothstep(1.25, 0.35, r);
   color *= vignette;
@@ -158,12 +178,18 @@ export function HypnoWebGLBackground({
     const posLocation = gl.getAttribLocation(program, "a_position");
     const resolutionLocation = gl.getUniformLocation(program, "u_resolution");
     const timeLocation = gl.getUniformLocation(program, "u_time");
+    const intensityLocation = gl.getUniformLocation(program, "u_intensity");
+    const speedLocation = gl.getUniformLocation(program, "u_speed");
+    const noiseLocation = gl.getUniformLocation(program, "u_noise");
+
+    let profile = getHypnoProfile(window.innerWidth);
 
     gl.enableVertexAttribArray(posLocation);
     gl.vertexAttribPointer(posLocation, 2, gl.FLOAT, false, 0, 0);
 
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      profile = getHypnoProfile(window.innerWidth);
+      const dpr = Math.min(window.devicePixelRatio || 1, profile.maxDpr);
       const width = Math.max(1, Math.floor(canvas.clientWidth * dpr));
       const height = Math.max(1, Math.floor(canvas.clientHeight * dpr));
       if (canvas.width !== width || canvas.height !== height) {
@@ -185,6 +211,15 @@ export function HypnoWebGLBackground({
       }
       if (timeLocation) {
         gl.uniform1f(timeLocation, elapsed);
+      }
+      if (intensityLocation) {
+        gl.uniform1f(intensityLocation, profile.intensity);
+      }
+      if (speedLocation) {
+        gl.uniform1f(speedLocation, profile.speed);
+      }
+      if (noiseLocation) {
+        gl.uniform1f(noiseLocation, profile.noise);
       }
       gl.drawArrays(gl.TRIANGLES, 0, 6);
       raf = requestAnimationFrame(frame);
