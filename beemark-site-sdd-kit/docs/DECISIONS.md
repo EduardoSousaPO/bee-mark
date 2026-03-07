@@ -165,6 +165,20 @@ Priorizar leitura rápida, percepção de fluxo e clareza comercial sem poluiç�
 
 ---
 
+## 2026-03-07 — Efeitos ativos em mobile e tablet com perfil leve
+### Decisão
+Manter os efeitos de fundo e interações também em mobile/tablet, usando perfis de baixa carga (FPS, DPR e intensidade adaptativos) e fallback animado somente em casos críticos (dispositivo muito pequeno, reduced motion ou ausência de suporte).
+
+### Motivo
+Garantir consistência visual da experiência entre desktop, tablet e mobile sem travamento ou perda de legibilidade.
+
+### Implicações
+- Hero WebGL ativo na maior parte dos dispositivos móveis/tablets
+- Tech Canvas ativo na maior parte dos dispositivos móveis/tablets
+- Parallax com amplitude reduzida em telas menores
+
+---
+
 ## Template de nova decisão
 
 ## AAAA-MM-DD — título curto

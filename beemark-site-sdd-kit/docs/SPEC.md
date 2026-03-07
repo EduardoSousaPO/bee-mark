@@ -158,6 +158,7 @@ Estabelecer um sistema de motion consistente.
 - GSAP restrito a uma cena de narrativa (timeline de fluxo), sem uso global.
 - na seção tecnológica, usar fluxo progressivo interligado (auto-play + clique + scroll) sem comprometer leitura.
 - calibrar intensidade visual por breakpoint (desktop > tablet > mobile) para preservar performance e conversão.
+- garantir comportamento equivalente de motion/interatividade em tablet e mobile, com perfil leve em vez de desligar efeitos.
 
 ---
 

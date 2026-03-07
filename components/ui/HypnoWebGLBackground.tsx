@@ -15,16 +15,20 @@ type HypnoProfile = {
   speed: number;
   noise: number;
   maxDpr: number;
+  targetFps: number;
 };
 
 function getHypnoProfile(width: number): HypnoProfile {
+  if (width < 768) {
+    return { intensity: 0.2, speed: 0.78, noise: 0.15, maxDpr: 1.1, targetFps: 24 };
+  }
   if (width < 1280) {
-    return { intensity: 0.24, speed: 0.88, noise: 0.2, maxDpr: 1.25 };
+    return { intensity: 0.24, speed: 0.88, noise: 0.2, maxDpr: 1.25, targetFps: 30 };
   }
   if (width < 1600) {
-    return { intensity: 0.31, speed: 1, noise: 0.28, maxDpr: 1.4 };
+    return { intensity: 0.31, speed: 1, noise: 0.28, maxDpr: 1.4, targetFps: 40 };
   }
-  return { intensity: 0.38, speed: 1.12, noise: 0.34, maxDpr: 1.5 };
+  return { intensity: 0.38, speed: 1.12, noise: 0.34, maxDpr: 1.5, targetFps: 48 };
 }
 
 function createShader(
@@ -113,7 +117,7 @@ void main() {
 export function HypnoWebGLBackground({
   className,
   fallbackVariant = "grid-flow",
-  mobileBreakpoint = 1024,
+  mobileBreakpoint = 390,
 }: HypnoWebGLBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [mode, setMode] = useState<"auto" | "webgl" | "fallback">("auto");
@@ -204,7 +208,14 @@ export function HypnoWebGLBackground({
 
     let raf = 0;
     const start = performance.now();
+    let lastFrame = start;
     const frame = (now: number) => {
+      const frameInterval = 1000 / profile.targetFps;
+      if (now - lastFrame < frameInterval) {
+        raf = requestAnimationFrame(frame);
+        return;
+      }
+      lastFrame = now;
       const elapsed = (now - start) / 1000;
       if (resolutionLocation) {
         gl.uniform2f(resolutionLocation, canvas.width, canvas.height);

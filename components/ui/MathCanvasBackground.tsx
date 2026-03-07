@@ -29,6 +29,7 @@ type CanvasProfile = {
   scale: number;
   timeStep: number;
   maxDpr: number;
+  targetFps: number;
 };
 
 const TAU = Math.PI * 2;
@@ -56,6 +57,7 @@ function getCanvasProfile(width: number): CanvasProfile {
       scale: 0.0035,
       timeStep: 0.0045,
       maxDpr: 1.2,
+      targetFps: 22,
     };
   }
   if (width < 1440) {
@@ -72,6 +74,7 @@ function getCanvasProfile(width: number): CanvasProfile {
       scale: 0.0039,
       timeStep: 0.0054,
       maxDpr: 1.35,
+      targetFps: 30,
     };
   }
   return {
@@ -87,13 +90,14 @@ function getCanvasProfile(width: number): CanvasProfile {
     scale: 0.0042,
     timeStep: 0.0062,
     maxDpr: 1.5,
+    targetFps: 45,
   };
 }
 
 export function MathCanvasBackground({
   className,
   fallbackVariant = "lines",
-  mobileBreakpoint = 768,
+  mobileBreakpoint = 390,
 }: MathCanvasBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [mode, setMode] = useState<"auto" | "canvas" | "fallback">("auto");
@@ -146,8 +150,15 @@ export function MathCanvasBackground({
 
     let raf = 0;
     let t = 0;
+    let lastFrame = performance.now();
 
-    const draw = () => {
+    const draw = (now: number) => {
+      const frameInterval = 1000 / profile.targetFps;
+      if (now - lastFrame < frameInterval) {
+        raf = requestAnimationFrame(draw);
+        return;
+      }
+      lastFrame = now;
       t += profile.timeStep;
 
       // Trail adaptativo para manter hipnose no desktop e legibilidade no tablet.
@@ -204,7 +215,7 @@ export function MathCanvasBackground({
       raf = requestAnimationFrame(draw);
     };
 
-    draw();
+    raf = requestAnimationFrame(draw);
 
     const onResize = () => {
       resize();
