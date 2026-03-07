@@ -151,6 +151,20 @@ Preservar impacto visual hipnótico sem sacrificar leitura, foco em CTA e estabi
 
 ---
 
+## 2026-03-07 — TechSection simplificada para linha do tempo clean
+### Decisão
+Reduzir densidade de texto e blocos na TechSection, adotando uma linha do tempo clean com pontos conectados e progressão visual (desktop horizontal, mobile vertical), mantendo interatividade por scroll, clique e hover.
+
+### Motivo
+Priorizar leitura rápida, percepção de fluxo e clareza comercial sem poluição visual.
+
+### Implicações
+- Menos copy na camada tecnológica
+- Estrutura visual centrada em etapas conectadas
+- Fluxo progressivo preservado com animação mais sutil
+
+---
+
 ## Template de nova decisão
 
 ## AAAA-MM-DD — título curto
