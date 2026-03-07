@@ -1,0 +1,34 @@
+---
+description: Processo SDD obrigatório
+alwaysApply: true
+---
+
+# Fluxo obrigatório
+Antes de codar, sempre:
+
+1. ler docs canônicos;
+2. mapear o estado atual do repo;
+3. confirmar impacto da mudança;
+4. seguir PRD e SPEC;
+5. só tocar arquivos aprovados.
+
+# Não fazer
+- não sair implementando no improviso;
+- não criar arquivos fora da SPEC;
+- não ampliar escopo por conta própria;
+- não reescrever arquitetura sem registrar decisão.
+
+# Quando houver conflito
+- PRD define intenção e escopo;
+- SPEC define execução;
+- rules definem comportamento;
+- DECISIONS registra exceções.
+
+# Fechamento
+Ao terminar uma fase, revisar:
+- build
+- lint
+- UX
+- mobile
+- a11y
+- documentação

@@ -1,0 +1,35 @@
+---
+description: Regras de dados e Supabase
+alwaysApply: true
+---
+
+# Escopo de dados do MVP
+No MVP, o Supabase existe principalmente para gravar leads do formulário de diagnóstico.
+
+# Regra principal
+Não expandir o modelo de dados além do necessário sem atualizar `docs/DATA_MODEL.md`, `docs/SPEC.md` e `docs/DECISIONS.md`.
+
+# Campos mínimos
+- nome
+- empresa
+- segmento
+- WhatsApp
+- e-mail
+- gargalo
+- serviço de interesse
+- mensagem
+- origem
+- consentimento LGPD
+- status
+- created_at
+
+# Segurança
+- não expor secrets no client;
+- validar payload antes de gravar;
+- não confiar apenas na validação do front;
+- registrar consentimento.
+
+# Não fazer
+- não criar dashboard completo no MVP;
+- não criar autenticação complexa;
+- não criar integrações extras sem especificação.

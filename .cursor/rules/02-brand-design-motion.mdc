@@ -1,0 +1,52 @@
+---
+description: Regras de marca, design, motion e backgrounds
+alwaysApply: true
+---
+
+# Marca
+A Beemark deve parecer:
+- premium;
+- estratégica;
+- tecnológica;
+- precisa;
+- forte;
+- elegante.
+
+# Paleta base
+Usar como base da identidade:
+- amarelo da marca;
+- branco;
+- preto;
+- cinzas escuros e médios.
+
+# Tipografia
+Priorizar hierarquia forte para títulos e excelente legibilidade no corpo.
+
+# Motion
+Usar motion para:
+- orientar leitura;
+- reforçar hierarquia;
+- evidenciar CTA;
+- transmitir sofisticação tecnológica.
+
+# Backgrounds animados
+Usar apenas quando ajudarem a construir percepção de:
+- fluxo;
+- dados;
+- conexão;
+- inteligência;
+- energia controlada.
+
+# Evitar
+- exagero visual;
+- animação em todos os elementos;
+- estética gamer;
+- partículas demais;
+- baixa legibilidade;
+- travamento no mobile.
+
+# Regras técnicas
+- preferir Framer Motion para motion principal;
+- usar CSS keyframes para loops simples;
+- usar GSAP apenas se necessário;
+- respeitar `prefers-reduced-motion`.

@@ -1,0 +1,39 @@
+---
+description: Qualidade, performance e validação final
+alwaysApply: true
+---
+
+# Qualidade mínima
+Toda entrega deve considerar:
+- build sem erro;
+- responsividade;
+- acessibilidade;
+- clareza visual;
+- consistência com marca;
+- consistência com PRD/SPEC.
+
+# Performance
+- evitar bibliotecas grandes sem necessidade;
+- conter motion pesado;
+- testar mobile;
+- otimizar imagens;
+- limitar fundos animados complexos.
+
+# Acessibilidade
+- contraste suficiente;
+- foco visível;
+- labels corretos;
+- reduced motion;
+- semântica de headings.
+
+# UX
+- CTA claro;
+- formulário simples;
+- estados de carregamento, sucesso e erro;
+- sem confundir o visitante.
+
+# Encerramento
+Antes de considerar pronto:
+- comparar resultado com PRD;
+- revisar a SPEC;
+- registrar decisões relevantes.

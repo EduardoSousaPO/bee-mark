@@ -1,0 +1,35 @@
+---
+description: Regras de arquitetura e implementação
+alwaysApply: true
+---
+
+# Stack aprovada
+- Next.js App Router
+- TypeScript
+- Tailwind
+- Framer Motion
+- Supabase
+
+# Princípios
+- simplicidade primeiro;
+- componentes pequenos e reutilizáveis;
+- nomes claros;
+- separação entre UI, seções, forms, lib e tipos;
+- evitar abstração prematura.
+
+# Estrutura
+Seguir a estrutura definida em `docs/SPEC.md`.
+
+# Não fazer
+- não criar pasta/componentização excessiva cedo demais;
+- não misturar lógica de dados com apresentação sem necessidade;
+- não adicionar state management complexo no MVP;
+- não criar arquitetura para “futuro hipotético” sem demanda.
+
+# Código
+- legível > esperto;
+- local > global quando possível;
+- poucas dependências;
+- boa semântica HTML;
+- classes consistentes;
+- acessibilidade embutida.

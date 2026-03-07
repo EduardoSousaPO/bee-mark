@@ -1,0 +1,136 @@
+# DECISIONS — Registro de decisões
+
+## Como usar
+Registrar aqui decisões arquiteturais, visuais ou de escopo que alteram o projeto de forma relevante.
+
+---
+
+## 2026-03-07 — Fundação do projeto
+### Decisão
+Criar o site da Beemark como um projeto de até 2 páginas, com foco em narrativa comercial, conversão e preparação para evolução futura.
+
+### Motivo
+Manter escopo enxuto, velocidade de execução e clareza de proposta.
+
+### Implicações
+- sem CMS no MVP
+- sem dashboard completo no MVP
+- sem autenticação no MVP
+- Supabase apenas para persistência de leads inicialmente
+
+---
+
+## 2026-03-07 — Escolha de stack
+### Decisão
+Usar Next.js + TypeScript + Tailwind + Framer Motion + Supabase + Vercel.
+
+### Motivo
+Boa produtividade, ótimo deploy, compatibilidade com Vercel e boa base para site premium com motion.
+
+### Implicações
+- motion principal em Framer Motion
+- GSAP só se necessário
+- estrutura App Router
+- formulário e API integrados ao Supabase
+
+---
+
+## 2026-03-07 — Direção visual
+### Decisão
+Adotar visual dark premium, high-tech, com backgrounds animados exclusivos e micro-interações avançadas.
+
+### Motivo
+Posicionar a Beemark como operação moderna, tecnológica e premium.
+
+### Implicações
+- motion com propósito
+- glow controlado
+- performance deve ser monitorada
+- evitar exagero visual
+
+---
+
+## 2026-03-07 — Bootstrap e Fase 1 na raiz do repo
+### Decisão
+Criar o app Next.js na raiz do repositório `bee-mark` (não dentro de `beemark-site-sdd-kit`). Fase 0 (bootstrap) e Fase 1 (layout base e identidade) implementadas.
+
+### Motivo
+O `create-next-app` não roda em diretório com conteúdo; a raiz já contém `.cursor`, `beemark-site-sdd-kit` e `pré-projeto`. Estrutura alvo da SPEC foi criada na raiz para um único projeto deployável.
+
+### Implicações
+- Documentos canônicos permanecem em `beemark-site-sdd-kit/docs/`
+- Código em `app/`, `components/`, `lib/`, `types/`, `supabase/migrations/` na raiz
+- Migração Supabase copiada para `supabase/migrations/0001_beemark_leads.sql`
+- Tokens de marca (beemark_brand_manual_ai.md) aplicados em Tailwind e globals.css
+
+---
+
+## 2026-03-07 — Banco de dados via MCP Supabase
+### Decisão
+Usar o MCP do Supabase (project-0-bee-mark-supabase) para operações de banco: migração da tabela `leads` foi aplicada via `apply_migration`; tipos TypeScript gerados via `generate_typescript_types` e salvos em `types/database.ts`.
+
+### Motivo
+Projeto já conectado ao Supabase; MCP garante que o schema no cloud esteja alinhado ao código.
+
+### Implicações
+- Migração `create_leads_table` aplicada no projeto Supabase (aoaavlnbfmrmcovwloff)
+- Inserção de leads na API usa `createAdminClient()` com `SUPABASE_SERVICE_ROLE_KEY`
+- Chaves e URL devem estar em `.env.local` (ver README)
+
+---
+
+## 2026-03-07 — Fase 6 Refino
+### Decisão
+Implementada Fase 6 da SPEC: metadata completa (Open Graph, Twitter, keywords), skip link de acessibilidade, estilos de foco visível (`:focus-visible`), formulário com `aria-busy` no loading, e `.env.example` com `NEXT_PUBLIC_SITE_URL` opcional.
+
+### Motivo
+Atender checklist de validação (acessibilidade, UX, consistência) e preparar para deploy.
+
+### Implicações
+- Skip link “Pular para o conteúdo” visível apenas no foco (teclado)
+- Metadata com template de título para páginas filhas
+- Motion já respeitava `prefers-reduced-motion` (Reveal, AnimatedBackground, globals)
+
+---
+
+## 2026-03-07 — Motion avançado com Canvas/WebGL
+### Decisão
+Adicionar dois backgrounds estratégicos: `HypnoWebGLBackground` no Hero e `MathCanvasBackground` na seção de tecnologia, mantendo `AnimatedBackground` como fallback para mobile, ausência de suporte gráfico e `prefers-reduced-motion`.
+
+### Motivo
+Elevar percepção premium/high-tech com efeitos matemáticos e artísticos mais autorais sem comprometer clareza comercial, performance e acessibilidade.
+
+### Implicações
+- Sem dependências novas (GSAP continua opcional e não foi necessário nesta etapa)
+- Apenas 1 fundo complexo por viewport dominante
+- `Reveal` ajustado para reduzir motion de forma real quando o usuário prefere menos animação
+- Hero e Tech agora têm camadas visuais mais fortes, mantendo CTA e legibilidade como prioridade
+
+---
+
+## 2026-03-07 — Fluxo com GSAP + TechSection orientada a IA comercial
+### Decisão
+Aplicar GSAP (`ScrollTrigger`) exclusivamente na `FlowSection` para reforçar narrativa de processo (progress line + entrada dos cards) e reestruturar a `TechSection` em layout bento interativo com foco principal na oferta de agente de IA para pré-venda no WhatsApp.
+
+### Motivo
+Atender a necessidade de maior sofisticação visual e interatividade sem transformar o site em playground. O objetivo foi aumentar percepção tecnológica e clareza comercial da proposta de IA com copy curta.
+
+### Implicações
+- GSAP foi adicionado como dependência controlada e usado de forma localizada
+- `FlowSection` ganhou roteiro visual mais forte com scripts de scroll
+- `TechSection` passou a enfatizar atendimento imediato, qualificação por estágios, follow-up e handoff para humano
+- `FinalCTASection` recebeu reforço curto da camada de IA + CRM
+
+---
+
+## Template de nova decisão
+
+## AAAA-MM-DD — título curto
+### Decisão
+...
+
+### Motivo
+...
+
+### Implicações
+...
