@@ -1,7 +1,24 @@
 "use client";
 
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+
+const TEAM = [
+  {
+    name: "Luiz Saraiva",
+    role: "Especialista em estrutura de marketing e geração de demanda.",
+    image: "/imagens/40582.png",
+    alt: "Foto de Luiz Saraiva",
+  },
+  {
+    name: "Eduardo Pires",
+    role: "Cientista de Dados, e engenheiro de IA",
+    image:
+      "/imagens/freepik__eduportrait-of-a-distinguished-man-between-27-and-__76067.jpeg",
+    alt: "Foto de Eduardo Pires",
+  },
+] as const;
 
 export function FounderSection() {
   return (
@@ -14,7 +31,7 @@ export function FounderSection() {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-bm-grayDark/60 to-transparent"
         aria-hidden
       />
-      <div className="mx-auto max-w-4xl text-center">
+      <div className="mx-auto max-w-6xl text-center">
         <Reveal direction="up">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-bm-yellow/70">
             Institucional
@@ -28,16 +45,32 @@ export function FounderSection() {
             Quem está por trás da <span className="text-bm-yellow">Beemark</span>
           </h2>
         </Reveal>
-        <Reveal direction="up" delay={0.1}>
-          <p className="mt-7 font-display text-4xl uppercase tracking-wider text-bm-yellow sm:text-5xl">
-            Luiz Saraiva
-          </p>
-          <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-bm-grayLight/78 sm:text-lg">
-            Especialista em estrutura de marketing e geração de demanda.
-          </p>
-        </Reveal>
+        <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
+          {TEAM.map((member, i) => (
+            <Reveal key={member.name} direction="up" delay={0.1 + i * 0.05}>
+              <article className="overflow-hidden rounded-bmMd border border-bm-grayDark/35 bg-bm-grayDark/10 text-left backdrop-blur-sm">
+                <div className="relative aspect-[4/5] w-full">
+                  <Image
+                    src={member.image}
+                    alt={member.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 420px, (min-width: 768px) 50vw, 100vw"
+                  />
+                </div>
+                <div className="p-5 text-center sm:p-6">
+                  <h3 className="font-display text-3xl uppercase tracking-wide text-bm-yellow sm:text-4xl">
+                    {member.name}
+                  </h3>
+                  <p className="mx-auto mt-3 max-w-md text-base leading-relaxed text-bm-grayLight/80">
+                    {member.role}
+                  </p>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </Section>
   );
 }
-
