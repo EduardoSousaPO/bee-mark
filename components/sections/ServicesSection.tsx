@@ -5,12 +5,36 @@ import { GlowCard } from "@/components/ui/GlowCard";
 import { Reveal } from "@/components/ui/Reveal";
 
 const SERVICES = [
-  { num: "01", title: "Posicionamento", desc: "Estratégia e mensagem que conectam oferta e mercado." },
-  { num: "02", title: "Presença digital", desc: "Design, landing pages e identidade que convertem." },
-  { num: "03", title: "Tráfego e criativos", desc: "Campanhas pagas e criativos orientados a resultado." },
-  { num: "04", title: "IA para qualificação", desc: "Triagem e score de leads antes do vendedor." },
-  { num: "05", title: "CRM e dados", desc: "Base única, métricas e visão completa do funil." },
-  { num: "06", title: "Fechamento humano", desc: "Lead qualificado na mão certa, no momento certo." },
+  {
+    num: "01",
+    title: "Diagnóstico estratégico",
+    desc: "Mapeamento de gargalos em funil, campanhas, atendimento e comercial.",
+  },
+  {
+    num: "02",
+    title: "Posicionamento e oferta",
+    desc: "Mensagem comercial clara para atrair o lead certo.",
+  },
+  {
+    num: "03",
+    title: "Aquisição e criativos",
+    desc: "Tráfego pago orientado a demanda qualificada e não só volume.",
+  },
+  {
+    num: "04",
+    title: "IA para pré-venda",
+    desc: "Qualificação, follow-up e triagem contínua antes do vendedor.",
+  },
+  {
+    num: "05",
+    title: "CRM e operação de vendas",
+    desc: "Processo integrado para fechar mais com controle de funil.",
+  },
+  {
+    num: "06",
+    title: "Escala por dados",
+    desc: "Decisões de otimização baseadas em métricas de negócio.",
+  },
 ];
 
 export function ServicesSection() {
@@ -26,7 +50,7 @@ export function ServicesSection() {
         <div className="text-center">
           <Reveal direction="up">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-bm-yellow/70">
-              Serviços
+              Entrega
             </p>
           </Reveal>
           <Reveal direction="up" delay={0.05}>
@@ -34,12 +58,12 @@ export function ServicesSection() {
               id="services-title"
               className="mt-3 font-display text-3xl uppercase leading-tight tracking-wide text-bm-white sm:text-4xl lg:text-5xl"
             >
-              O que a Beemark <span className="text-bm-yellow">constrói</span>
+              O que a Beemark <span className="text-bm-yellow">entrega</span>
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.1}>
             <p className="mx-auto mt-5 max-w-xl text-lg text-bm-grayLight/80">
-              Uma operação integrada: da estratégia ao fechamento.
+              Estrutura completa para transformar marketing em venda previsível.
             </p>
           </Reveal>
         </div>

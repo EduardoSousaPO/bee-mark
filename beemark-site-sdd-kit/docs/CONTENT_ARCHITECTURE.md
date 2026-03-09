@@ -22,7 +22,17 @@ A Beemark entra quando o marketing está desconectado, fraco ou sem previsibilid
 
 ---
 
-## 2. O problema
+## 2. Ponte de impacto (pós-hero)
+### Objetivo
+Conectar promessa inicial com percepção imediata de escala e integração.
+
+### Conteúdo esperado
+- frase de resultado macro;
+- frase curta sobre estrutura integrada (tráfego + IA + posicionamento + vendas).
+
+---
+
+## 3. O problema estrutural
 ### Objetivo
 Fazer o visitante se reconhecer.
 
@@ -36,7 +46,39 @@ Fazer o visitante se reconhecer.
 
 ---
 
-## 3. O que a Beemark faz
+## 4. Autoridade de estrutura
+### Objetivo
+Reforçar por que a Beemark é superior ao marketing fragmentado.
+
+### Conteúdo esperado
+- método ponta a ponta;
+- operação conectando marketing, IA e comercial;
+- foco em métrica de negócio.
+
+---
+
+## 5. Resultados reais
+### Objetivo
+Provar resultado concreto com números e caso operacional.
+
+### Conteúdo esperado
+- caso com números de investimento, leads, vendas e faturamento;
+- caso de IA 24/7 reduzindo custo operacional de pré-venda.
+
+---
+
+## 6. Para quem é a Beemark (ICP)
+### Objetivo
+Deixar claro para quem a operação foi desenhada.
+
+### Conteúdo esperado
+- empresas que precisam vender mais com previsibilidade;
+- empresas com time comercial que precisam de lead qualificado;
+- empresas que querem escala com controle do funil.
+
+---
+
+## 7. O que a Beemark entrega
 ### Objetivo
 Explicar a oferta.
 
@@ -50,7 +92,7 @@ Explicar a oferta.
 
 ---
 
-## 4. Fluxo completo
+## 8. Fluxo completo
 ### Objetivo
 Mostrar a integração ponta a ponta.
 
@@ -66,21 +108,7 @@ Mostrar a integração ponta a ponta.
 
 ---
 
-## 5. Diferenciais
-### Objetivo
-Separar a Beemark de uma agência tradicional.
-
-### Possíveis diferenciais
-- visão sistêmica do funil;
-- personalização;
-- clareza de métricas;
-- tecnologia aplicada;
-- IA como filtro, não como enfeite;
-- marketing conectado à venda.
-
----
-
-## 6. Camada tecnológica
+## 9. Camada tecnológica
 ### Objetivo
 Materializar a proposta de inteligência.
 
@@ -92,21 +120,28 @@ Materializar a proposta de inteligência.
 
 ---
 
-## 7. Credibilidade
+## 10. Oferta principal
 ### Objetivo
-Reduzir insegurança.
+Responder de forma explícita: “o que exatamente eu compro?”.
 
-### Pode conter
-- “como operamos”
-- processo
-- metodologia
-- stack
-- diagnóstico inicial
-- transparência sobre acompanhamento
+### Conteúdo
+- Diagnóstico Beemark;
+- escopo da análise (funil, campanhas, estrutura digital, atendimento, comercial);
+- entrega final: plano de crescimento.
 
 ---
 
-## 8. CTA final
+## 11. Autoridade institucional
+### Objetivo
+Reforçar confiança de forma curta e direta.
+
+### Conteúdo
+- quem está por trás da Beemark;
+- especialidade principal.
+
+---
+
+## 12. CTA final
 ### Objetivo
 Levar para diagnóstico.
 

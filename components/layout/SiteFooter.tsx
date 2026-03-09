@@ -42,7 +42,7 @@ export function SiteFooter() {
                     href={ROUTES.diagnostico}
                     className="text-sm text-bm-grayLight/70 transition-colors hover:text-bm-yellow"
                   >
-                    Diagnóstico gratuito
+                    Diagnóstico estratégico
                   </Link>
                 </li>
               </ul>

@@ -13,8 +13,8 @@ const TIMELINE_STEPS = [
     detail: "Atende o lead em segundos no WhatsApp.",
   },
   {
-    title: "Qualificacao",
-    detail: "Filtra curioso x comprador real.",
+    title: "Qualificação",
+    detail: "Filtra curioso x comprador com potencial real.",
   },
   {
     title: "Follow-up",
@@ -144,13 +144,14 @@ export function TechSection() {
               id="tech-title"
               className="mt-3 font-display text-3xl uppercase leading-tight tracking-wide text-bm-white sm:text-4xl lg:text-5xl"
             >
-              Tecnologia com <span className="text-bm-yellow">proposito</span>
+              IA comercial que trabalha{" "}
+              <span className="text-bm-yellow">24/7</span>
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.1}>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-bm-grayLight/80">
-              Fluxo de IA no WhatsApp: atende, qualifica, nutre e conecta ao
-              fechamento humano.
+              A IA atende, qualifica, faz follow-up e direciona para o vendedor
+              humano com contexto completo.
             </p>
           </Reveal>
         </div>
@@ -219,6 +220,10 @@ export function TechSection() {
               );
             })}
           </ul>
+          <p className="relative mt-5 border-t border-bm-grayDark/35 pt-4 text-xs uppercase tracking-[0.16em] text-bm-grayLight/58">
+            Em operações B2B, esse fluxo pode absorver rotina equivalente a até
+            5 SDRs.
+          </p>
         </div>
       </div>
     </Section>

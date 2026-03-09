@@ -6,24 +6,24 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const DIFFERENTIALS = [
   {
-    title: "Visão sistêmica",
-    desc: "Funil completo, não peças soltas. Cada etapa conecta na próxima.",
+    title: "Estrutura ponta a ponta",
+    desc: "Da aquisição ao fechamento, cada etapa é desenhada para funcionar em conjunto.",
   },
   {
-    title: "Método, não pacote",
-    desc: "Personalização de acordo com seu mercado, não template genérico.",
+    title: "Método antes de mídia",
+    desc: "Diagnóstico e estratégia vêm antes de escalar investimento.",
   },
   {
-    title: "Métricas claras",
-    desc: "Custo por lead, taxa de conversão e ROI visíveis em tempo real.",
+    title: "Métricas de negócio",
+    desc: "Custo por lead, conversão e eficiência comercial monitorados com clareza.",
   },
   {
-    title: "IA como filtro",
-    desc: "Tecnologia aplicada para qualificar lead, não para enfeitar slide.",
+    title: "IA como pré-venda",
+    desc: "Qualificação, follow-up e triagem contínua antes do vendedor entrar.",
   },
   {
-    title: "Marketing + Venda",
-    desc: "CRM e atendimento integrados. O vendedor recebe o lead pronto.",
+    title: "Marketing + Comercial",
+    desc: "CRM, atendimento e vendas conectados para reduzir desperdício de lead.",
   },
 ];
 
@@ -39,7 +39,7 @@ export function DifferentialsSection() {
         <div className="max-w-2xl">
           <Reveal direction="up">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-bm-yellow/70">
-              Diferenciais
+              Autoridade operacional
             </p>
           </Reveal>
           <Reveal direction="up" delay={0.05}>
@@ -47,14 +47,14 @@ export function DifferentialsSection() {
               id="diff-title"
               className="mt-3 font-display text-3xl uppercase leading-tight tracking-wide text-bm-white sm:text-4xl lg:text-5xl"
             >
-              Por que a Beemark é{" "}
-              <span className="text-bm-yellow">diferente</span>
+              Por que nossa{" "}
+              <span className="text-bm-yellow">estrutura é superior</span>
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.1}>
             <p className="mt-5 text-lg leading-relaxed text-bm-grayLight/80">
-              Não somos mais uma agência que entrega campanhas e some.
-              Entramos quando o marketing falha e operamos o fluxo inteiro.
+              Não operamos marketing em peças isoladas. Construímos um sistema
+              integrado para gerar demanda com previsibilidade.
             </p>
           </Reveal>
         </div>

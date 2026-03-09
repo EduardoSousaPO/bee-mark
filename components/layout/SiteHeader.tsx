@@ -44,7 +44,7 @@ export function SiteHeader() {
             )}
           >
             <span className="sm:hidden">Diagnóstico</span>
-            <span className="hidden sm:inline">Diagnóstico gratuito</span>
+            <span className="hidden sm:inline">Diagnóstico estratégico</span>
           </Link>
         </nav>
       </div>

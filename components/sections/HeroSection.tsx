@@ -90,7 +90,7 @@ export function HeroSection() {
               variant="primary"
               className="px-10 py-4 text-base"
             >
-              Solicitar diagnóstico gratuito
+              Solicitar diagnóstico estratégico
             </MagneticButton>
           </div>
         </FadeIn>

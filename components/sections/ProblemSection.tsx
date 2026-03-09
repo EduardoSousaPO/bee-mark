@@ -6,20 +6,20 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const PROBLEMS = [
   {
-    title: "Leads ruins",
-    desc: "Campanhas que atraem volume sem qualidade. Vendedor perde tempo com quem nunca vai fechar.",
+    title: "Tráfego sem processo",
+    desc: "Campanha gera volume, mas sem qualificação e sem critério de passagem para vendas.",
   },
   {
-    title: "Branding sem conversão",
-    desc: "Marca bonita que não gera demanda. Presença digital que não conecta com venda.",
+    title: "Marca sem direção comercial",
+    desc: "Posicionamento desconectado da oferta gera atenção, mas não gera demanda previsível.",
   },
   {
-    title: "Atendimento lento",
-    desc: "Lead chega quente e esfria. O vendedor recebe o contato tarde demais.",
+    title: "Pré-venda lenta",
+    desc: "Lead quente esfria por falta de resposta, follow-up e triagem estruturada.",
   },
   {
-    title: "Funil invisível",
-    desc: "Sem visão clara de custo por lead, taxa de conversão ou onde o processo falha.",
+    title: "Comercial sem contexto",
+    desc: "Vendedor recebe contato cru, sem histórico e sem prioridade clara de fechamento.",
   },
 ];
 
@@ -30,7 +30,7 @@ export function ProblemSection() {
         <div className="max-w-2xl">
           <Reveal direction="up">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-bm-yellow/70">
-              O problema
+              O erro mais comum
             </p>
           </Reveal>
           <Reveal direction="up" delay={0.05}>
@@ -38,15 +38,15 @@ export function ProblemSection() {
               id="problem-title"
               className="mt-3 font-display text-3xl uppercase leading-tight tracking-wide text-bm-white sm:text-4xl lg:text-5xl"
             >
-              O marketing que{" "}
-              <span className="text-bm-yellow">não entrega</span>
+              Marketing solto{" "}
+              <span className="text-bm-yellow">não escala</span>
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.1}>
             <p className="mt-5 text-lg leading-relaxed text-bm-grayLight/80">
-              Empresas contratam marketing de forma fragmentada. Tráfego de um
-              lado, CRM de outro, atendimento solto. O resultado: zero
-              previsibilidade e lead desperdiçado.
+              O problema raramente é o anúncio isolado. O problema é não ter
+              estrutura conectando posicionamento, aquisição, IA, CRM e processo
+              comercial.
             </p>
           </Reveal>
         </div>

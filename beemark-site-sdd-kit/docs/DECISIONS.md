@@ -193,6 +193,25 @@ Garantir integridade visual da primeira dobra em iPhone/Android e manter percep�
 
 ---
 
+## 2026-03-09 — Reestruturação comercial da landing para prova, ICP e oferta
+### Decisão
+Reorganizar a narrativa da home para progressão comercial mais clara: impacto pós-hero, autoridade estrutural, prova de resultados, ICP explícito, oferta principal (`Diagnóstico Beemark`), bloco institucional do fundador e fechamento com CTA forte.
+
+### Motivo
+A estrutura anterior comunicava bem processo e tecnologia, mas deixava menos explícito:
+- resultado concreto;
+- para quem a operação é;
+- o que exatamente está sendo comprado.
+
+### Implicações
+- Nova ordem de seções na home para reduzir fricção de entendimento
+- Inclusão de casos reais (automotivo e consultoria de investimentos) para reforço de credibilidade
+- CTA principal padronizado para “diagnóstico estratégico”
+- Metadata com canonical explícito para `/` e `/diagnostico`
+- Copy mais orientada a conversão e clareza comercial (marketing + IA + qualificação + processo comercial)
+
+---
+
 ## Template de nova decisão
 
 ## AAAA-MM-DD — título curto

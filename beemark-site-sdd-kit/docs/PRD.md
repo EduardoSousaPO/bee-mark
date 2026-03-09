@@ -146,13 +146,17 @@ Objetivo: vender a proposta e converter.
 
 ### Seções previstas
 1. Hero
-2. Problema de mercado / dor do cliente
-3. O que a Beemark faz
-4. Fluxo completo da operação
-5. Diferenciais
-6. Motion demo / percepção tecnológica
-7. Provas ou estrutura de credibilidade
-8. CTA final
+2. Ponte de impacto pós-hero
+3. Problema estrutural do marketing fragmentado
+4. Autoridade de método / diferenciais
+5. Provas de resultado
+6. Para quem é a Beemark (ICP)
+7. O que a Beemark entrega
+8. Fluxo completo da operação
+9. Camada tecnológica (IA de pré-venda)
+10. Oferta principal (Diagnóstico Beemark)
+11. Autoridade institucional (fundador)
+12. CTA final
 
 ## Página 2 — Diagnóstico
 Objetivo: coletar lead com contexto.

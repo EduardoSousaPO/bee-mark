@@ -12,23 +12,23 @@ const STEPS = [
   { num: "03", title: "Estrutura digital", desc: "Landing pages, identidade e presença." },
   { num: "04", title: "Campanhas", desc: "Tráfego pago orientado a conversão." },
   { num: "05", title: "Entrada dos leads", desc: "Captura qualificada em todos os canais." },
-  { num: "06", title: "IA qualifica", desc: "Triagem e score antes do vendedor." },
+  { num: "06", title: "IA qualifica", desc: "Triagem, follow-up e score antes do vendedor." },
   { num: "07", title: "CRM registra", desc: "Base única com visão completa do funil." },
-  { num: "08", title: "Vendedor fecha", desc: "Lead certo, na hora certa, preparado." },
+  { num: "08", title: "Vendedor fecha", desc: "Lead certo, na hora certa, com contexto." },
 ];
 
 const FLOW_LAYERS = [
   {
-    title: "Aquisição",
-    desc: "Tráfego e criativos para gerar entrada qualificada.",
+    title: "Camada de aquisição",
+    desc: "Posicionamento, criativos e tráfego para gerar demanda qualificada.",
   },
   {
-    title: "Pré-venda IA",
-    desc: "Conversa, triagem e follow-up antes do vendedor.",
+    title: "Camada de pré-venda IA",
+    desc: "Conversa, triagem e follow-up contínuo antes do vendedor.",
   },
   {
-    title: "CRM + Fechamento",
-    desc: "Contexto completo para o humano fechar com precisão.",
+    title: "Camada comercial",
+    desc: "CRM com contexto completo para fechar com precisão.",
   },
 ];
 
@@ -114,7 +114,7 @@ export function FlowSection() {
         <div className="text-center">
           <Reveal direction="up">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-bm-yellow/70">
-              Processo
+              Método Beemark
             </p>
           </Reveal>
           <Reveal direction="up" delay={0.05}>
@@ -122,12 +122,13 @@ export function FlowSection() {
               id="flow-title"
               className="mt-3 font-display text-3xl uppercase leading-tight tracking-wide text-bm-white sm:text-4xl lg:text-5xl"
             >
-              Do diagnóstico ao <span className="text-bm-yellow">fechamento</span>
+              Como a estrutura vira{" "}
+              <span className="text-bm-yellow">venda previsível</span>
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.1}>
             <p className="mx-auto mt-5 max-w-xl text-lg text-bm-grayLight/80">
-              Uma jornada integrada. Cada etapa entrega valor real.
+              Marketing, IA e comercial operando no mesmo fluxo.
             </p>
           </Reveal>
         </div>

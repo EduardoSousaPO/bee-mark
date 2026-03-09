@@ -39,17 +39,16 @@ export function FinalCTASection() {
             id="cta-final-title"
             className="font-display text-4xl uppercase leading-tight tracking-wide sm:text-5xl lg:text-6xl"
           >
-            Próximo passo: diagnóstico
+            Se seu marketing não gera venda, o problema não é o anúncio
           </h2>
         </Reveal>
         <Reveal direction="up" delay={0.1}>
           <div className="mt-5 space-y-3">
-            <p className="max-w-lg text-lg text-bm-grayDark">
-              Conte seu cenário. Avaliamos seu funil e indicamos o que fazer em
-              seguida — sem compromisso.
+            <p className="max-w-2xl text-lg text-bm-grayDark sm:text-xl">
+              É a estrutura. A Beemark constrói o sistema completo.
             </p>
-            <p className="text-xs uppercase tracking-[0.22em] text-bm-black/70">
-              Inclui estratégia de IA para pré-venda no WhatsApp + CRM
+            <p className="text-xs uppercase tracking-[0.22em] text-bm-black/70 sm:text-sm">
+              Diagnóstico estratégico com plano de crescimento para execução
             </p>
           </div>
         </Reveal>
@@ -60,7 +59,7 @@ export function FinalCTASection() {
               variant="secondary"
               className="!bg-bm-black !text-bm-yellow !px-12 !py-4 !text-base hover:!bg-bm-grayDark hover:!shadow-[0_0_40px_rgba(0,0,0,0.3)]"
             >
-              Solicitar diagnóstico gratuito
+              👇 Solicitar diagnóstico estratégico
             </MagneticButton>
           </div>
         </Reveal>

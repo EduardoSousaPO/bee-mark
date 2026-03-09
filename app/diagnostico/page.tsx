@@ -3,11 +3,15 @@ import { Section } from "@/components/ui/Section";
 import { DiagnosticForm } from "@/components/forms/DiagnosticForm";
 
 export const metadata: Metadata = {
-  title: "Solicitar diagnóstico",
+  title: "Solicitar diagnóstico estratégico",
   description:
     "Solicite um diagnóstico do seu funil de marketing. Conte seu cenário e receba uma análise da Beemark.",
+  alternates: {
+    canonical: "/diagnostico",
+  },
   openGraph: {
-    title: "Solicitar diagnóstico | Beemark",
+    title: "Solicitar diagnóstico estratégico | Beemark",
+    url: "/diagnostico",
     description:
       "Conte seu negócio e seu principal gargalo. Avaliamos e retornamos com os próximos passos.",
   },
@@ -23,7 +27,7 @@ export default function DiagnosticoPage() {
           </p>
           <h1 className="mt-3 font-display text-3xl uppercase leading-tight tracking-wide text-bm-white sm:text-4xl lg:text-5xl">
             Solicitar{" "}
-            <span className="text-bm-yellow">diagnóstico</span>
+            <span className="text-bm-yellow">diagnóstico estratégico</span>
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-bm-grayLight/80">
             Conte seu negócio, seu principal gargalo e o que mais te interessa.

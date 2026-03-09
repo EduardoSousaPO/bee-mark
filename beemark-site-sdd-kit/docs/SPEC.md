@@ -166,12 +166,16 @@ Estabelecer um sistema de motion consistente.
 ### CREATE
 - `app/page.tsx`
 - `components/sections/HeroSection.tsx`
+- `components/sections/ImpactBridgeSection.tsx`
 - `components/sections/ProblemSection.tsx`
+- `components/sections/ResultsSection.tsx`
+- `components/sections/ForWhomSection.tsx`
 - `components/sections/ServicesSection.tsx`
 - `components/sections/FlowSection.tsx`
 - `components/sections/DifferentialsSection.tsx`
 - `components/sections/TechSection.tsx`
-- `components/sections/CredibilitySection.tsx`
+- `components/sections/OfferSection.tsx`
+- `components/sections/FounderSection.tsx`
 - `components/sections/FinalCTASection.tsx`
 
 ### Objetivo
@@ -245,9 +249,22 @@ Finalizar com qualidade.
 - CTA principal
 - visual tecnológico com background animado premium
 
+## ImpactBridgeSection
+- frase de impacto logo após primeira dobra
+- ponte entre promessa e prova
+
 ## ProblemSection
 - o que normalmente falha no marketing das empresas
 - por que leads ruins e operação desconectada são um problema
+
+## ResultsSection
+- provas com resultado concreto
+- caso numérico
+- caso operacional de IA na pré-venda
+
+## ForWhomSection
+- ICP explícito
+- autoseleção rápida do visitante
 
 ## ServicesSection
 - blocos claros do que a Beemark constrói
@@ -265,9 +282,14 @@ Finalizar com qualidade.
 - explicar que a tecnologia não substitui a estratégia, ela organiza e acelera
 - destacar com prioridade o agente de IA para pré-venda no WhatsApp, com copy enxuta e orientada a conversão
 
-## CredibilitySection
-- estrutura, método, processo, diagnóstico, visão de funil
-- se não houver cases públicos, usar “como operamos”
+## OfferSection
+- oferta principal clara (Diagnóstico Beemark)
+- escopo objetivo
+- entrega final do diagnóstico
+
+## FounderSection
+- reforço institucional curto
+- autoridade sem texto biográfico longo
 
 ## FinalCTASection
 - convite forte para diagnóstico
