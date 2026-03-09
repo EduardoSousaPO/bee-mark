@@ -13,7 +13,7 @@ const TEAM = [
   },
   {
     name: "Eduardo Pires",
-    role: "Cientista de Dados, e engenheiro de IA",
+    role: "Cientista de Dados e engenheiro de IA",
     image:
       "/imagens/freepik__eduportrait-of-a-distinguished-man-between-27-and-__76067.jpeg",
     alt: "Foto de Eduardo Pires",
