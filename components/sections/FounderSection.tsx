@@ -11,13 +11,6 @@ const TEAM = [
     image: "/imagens/40582.png",
     alt: "Foto de Luiz Saraiva",
   },
-  {
-    name: "Eduardo Pires",
-    role: "Cientista de Dados e engenheiro de IA",
-    image:
-      "/imagens/freepik__eduportrait-of-a-distinguished-man-between-27-and-__76067.jpeg",
-    alt: "Foto de Eduardo Pires",
-  },
 ] as const;
 
 export function FounderSection() {
@@ -45,7 +38,7 @@ export function FounderSection() {
             Quem está por trás da <span className="text-bm-yellow">Beemark</span>
           </h2>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-md gap-6 md:grid-cols-1">
           {TEAM.map((member, i) => (
             <Reveal key={member.name} direction="up" delay={0.1 + i * 0.05}>
               <article className="overflow-hidden rounded-bmMd border border-bm-grayDark/35 bg-bm-grayDark/10 text-left backdrop-blur-sm">
